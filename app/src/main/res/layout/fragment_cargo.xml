@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textWhite">
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_marginStart="25dip"
+        tools:layout_marginEnd="25dip"
+        tools:layout_marginTop="75dip"
+        tools:layout_marginBottom="75dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtCargoRocket3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Rocket 3"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:typeface="sans"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnCargoR3D"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_red"
+                android:fontFamily="sans-serif"
+                android:onClick="decrementCounter"
+                android:text="-"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/txtCargoR3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:text="0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:typeface="sans" />
+
+            <Button
+                android:id="@+id/btnCargoR3U"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_orange"
+                android:fontFamily="sans-serif"
+                android:onClick="incrementCounter"
+                android:text="+"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtCargoRocket2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Rocket 2"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:typeface="sans"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnCargoR2D"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_red"
+                android:fontFamily="sans-serif"
+                android:onClick="decrementCounter"
+                android:text="-"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/txtCargoR2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:text="0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:typeface="sans" />
+
+            <Button
+                android:id="@+id/btnCargoR2U"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_orange"
+                android:fontFamily="sans-serif"
+                android:onClick="incrementCounter"
+                android:text="+"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtCargoRocket1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Rocket 1"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:typeface="sans"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnCargoR1D"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_red"
+                android:fontFamily="sans-serif"
+                android:onClick="decrementCounter"
+                android:text="-"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/txtCargoR1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:text="0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:typeface="sans" />
+
+            <Button
+                android:id="@+id/btnCargoR1U"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_orange"
+                android:fontFamily="sans-serif"
+                android:onClick="incrementCounter"
+                android:text="+"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtCargoPleb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Cargo Ship"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20sp"
+                android:typeface="sans"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnCargoPD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_red"
+                android:fontFamily="sans-serif"
+                android:onClick="decrementCounter"
+                android:text="-"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/txtCargoP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:text="0"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:typeface="sans" />
+
+            <Button
+                android:id="@+id/btnCargoPU"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_radio_button_orange"
+                android:fontFamily="sans-serif"
+                android:onClick="incrementCounter"
+                android:text="+"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="visible"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

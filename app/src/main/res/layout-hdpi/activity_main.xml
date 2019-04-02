@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorMain"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@color/textWhite">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="0dp"
+
+            android:layout_marginStart="25dip"
+            android:layout_marginEnd="25dip"
+            android:layout_marginBottom="75dip"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/LLTeamNumber"
+                style="?android:buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dip"
+                android:layout_marginTop="20dip"
+                android:layout_marginEnd="20dip"
+                android:layout_marginBottom="0dp"
+                android:layout_weight="2">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/txtWidgetTeamNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtTeamNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Team Number"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLMatchNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dip"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="20dip"
+                android:layout_marginBottom="20dip"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/txtWidgetMatchNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/txtMatchNum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Match Number"
+                        android:inputType="number"
+                        android:selectAllOnFocus="true"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:typeface="sans" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/redBlueGroup"
+                style="?android:buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:paddingStart="20dip"
+                android:paddingTop="10dip"
+                android:paddingEnd="20dip"
+                android:paddingBottom="10dip">
+
+                <RadioButton
+                    android:id="@+id/red"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dip"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_button_alliancered"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    android:text="red"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/blue"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dip"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_button_blue"
+                    android:button="@android:color/transparent"
+                    android:text="blue"
+                    android:textSize="24sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                style="?android:buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:paddingStart="20dip"
+                android:paddingTop="10dip"
+                android:paddingEnd="20dip"
+                android:paddingBottom="10dip">
+
+                <Button
+                    android:id="@+id/btnStart"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dip"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_button_green"
+                    android:text="Start"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="?android:buttonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:paddingStart="20dip"
+                android:paddingTop="10dip"
+                android:paddingEnd="20dip"
+                android:paddingBottom="10dip">
+
+                <Button
+                    android:id="@+id/btnQR"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dip"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_button_orange"
+                    android:onClick="genQR"
+                    android:text="Generate QR"
+                    android:textColor="@color/colorPrimaryDark"
+
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/button8"
+                    style="?android:buttonBarButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dip"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="20dip"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_radio_button_red"
+                    android:onClick="delete"
+                    android:text="delete"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dip"
+                android:layout_marginTop="5dip"
+                android:layout_marginEnd="5dip"
+                android:layout_marginBottom="5dip"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:contentDescription="stormLogo"
+                android:cropToPadding="true"
+                android:visibility="visible"
+                app:srcCompat="@drawable/stormlogo_main" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>
