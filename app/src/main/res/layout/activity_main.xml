@@ -163,7 +163,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_radio_button_green"
-                android:text="Start"
+                android:text="iClothe"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp" />
         </LinearLayout>
