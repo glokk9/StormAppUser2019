@@ -20,44 +20,46 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="1"
-            app:titleTextColor="@color/colorPrimaryDark"
             android:background="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay"
-            app:title="@string/app_name">
+            app:title="                 Pick Clothing"
+            app:titleTextColor="@color/colorPrimaryDark">
 
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
-            android:layout_width="match_parent"
+            android:layout_width="324dp"
             android:layout_height="wrap_content"
-            app:tabTextColor="@color/colorPrimaryDark"
-            app:tabSelectedTextColor="@color/red">
+            android:textSize="25sp"
+            app:tabSelectedTextColor="@color/red"
+            app:tabTextColor="@color/colorPrimaryDark">
+
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabAuto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sand" />
+                android:text="Shirts" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabHatch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hatch" />
+                android:text="Pants" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabCargo"
-                android:layout_width="wrap_content"
+                android:layout_width="132dp"
                 android:layout_height="wrap_content"
-                android:text="Cargo" />
+                android:text="formal" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabEndgame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="t &#8212; 30" />
+                android:text="Other" />
 
         </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
