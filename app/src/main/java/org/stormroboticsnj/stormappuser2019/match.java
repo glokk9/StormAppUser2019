@@ -127,14 +127,14 @@ public class match extends AppCompatActivity implements autonomous.OnFragmentInt
             case 15:
                 if (cargoP < 32) {
                     ++cargoP;
-                    t = (TextView) findViewById(R.id.txtCargoPS);
+                    //t = (TextView) findViewById(R.id.txtCargoPS);
                     t.setText(Integer.toString(cargoP));
                 }
                 break;
             case 16:
                 if (cargoG < 32){
                     ++cargoG;
-                    t = (TextView) findViewById(R.id.txtCargoG);
+                    //t = (TextView) findViewById(R.id.txtCargoG);
                     t.setText(Integer.toString(cargoG));
                 }
                 break;
@@ -169,14 +169,14 @@ public class match extends AppCompatActivity implements autonomous.OnFragmentInt
             case 25:
                 if (hatchP < 32) {
                     ++hatchP;
-                    t = (TextView) findViewById(R.id.txtHatchPS);
+                    //t = (TextView) findViewById(R.id.txtHatchPS);
                     t.setText(Integer.toString(hatchP));
                 }
                 break;
             case 26:
                 if (hatchG < 32) {
                     ++hatchG;
-                    t = (TextView) findViewById(R.id.txtHatchG);
+                    //t = (TextView) findViewById(R.id.txtHatchG);
                     t.setText(Integer.toString(hatchG));
                 }
                 break;
@@ -236,14 +236,14 @@ public class match extends AppCompatActivity implements autonomous.OnFragmentInt
             case 15:
                 if (cargoP > 0) {
                     --cargoP;
-                    t = (TextView) findViewById(R.id.txtCargoPS);
+                    //t = (TextView) findViewById(R.id.txtCargoPS);
                     t.setText(Integer.toString(cargoP));
                 }
                 break;
             case 16:
                 if (cargoG > 0) {
                     --cargoG;
-                    t = (TextView) findViewById(R.id.txtCargoG);
+                    //t = (TextView) findViewById(R.id.txtCargoG);
                     t.setText(Integer.toString(cargoG));
                 }
                 break;
@@ -278,14 +278,14 @@ public class match extends AppCompatActivity implements autonomous.OnFragmentInt
             case 25:
                 if (hatchP > 0) {
                     --hatchP;
-                    t = (TextView) findViewById(R.id.txtHatchPS);
+                    //t = (TextView) findViewById(R.id.txtHatchPS);
                     t.setText(Integer.toString(hatchP));
                 }
                 break;
             case 26:
                 if (hatchG > 0) {
                     --hatchG;
-                    t = (TextView) findViewById(R.id.txtHatchG);
+                    //t = (TextView) findViewById(R.id.txtHatchG);
                     t.setText(Integer.toString(hatchG));
                 }
                 break;

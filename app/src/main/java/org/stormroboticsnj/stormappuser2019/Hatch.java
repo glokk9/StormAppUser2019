@@ -82,14 +82,14 @@ public class Hatch extends Fragment {
         hatchPlebDown.setTag(24);
         final Button hatchPlebUp = view.findViewById(R.id.btnHatchPU);
         hatchPlebUp.setTag(24);
-        final Button hatchPlayerStationUp = view.findViewById(R.id.btnHatchPSU);
-        hatchPlayerStationUp.setTag(25);
-        final Button hatchPlayerStationDown = view.findViewById(R.id.btnHatchPSD);
-        hatchPlayerStationDown.setTag(25);
-        final Button hatchGroundDown = view.findViewById(R.id.btnHatchGD);
-        hatchGroundDown.setTag(26);
-        final Button hatchGroundUp = view.findViewById(R.id.btnHatchGU);
-        hatchGroundUp.setTag(26);
+//        final Button hatchPlayerStationUp = view.findViewById(R.id.btnHatchPSU);
+//        hatchPlayerStationUp.setTag(25);
+//        final Button hatchPlayerStationDown = view.findViewById(R.id.btnHatchPSD);
+//        hatchPlayerStationDown.setTag(25);
+//        final Button hatchGroundDown = view.findViewById(R.id.btnHatchGD);
+//        hatchGroundDown.setTag(26);
+//        final Button hatchGroundUp = view.findViewById(R.id.btnHatchGU);
+//        hatchGroundUp.setTag(26);
         return view ;
     }
 

@@ -81,14 +81,14 @@ public class Cargo extends Fragment {
         cargoPlebDown.setTag(14);
         final Button cargoPlebUp = view.findViewById(R.id.btnCargoPU);
         cargoPlebUp.setTag(14);
-        final Button cargoPlayerStationUp = view.findViewById(R.id.btnCargoPSU);
-        cargoPlayerStationUp.setTag(15);
-        final Button cargoPlayerStationDown = view.findViewById(R.id.btnCargoPSD);
-        cargoPlayerStationDown.setTag(15);
-        final Button cargoGroundDown = view.findViewById(R.id.btnCargoGD);
-        cargoGroundDown.setTag(16);
-        final Button cargoGroundUp = view.findViewById(R.id.btnCargoGU);
-        cargoGroundUp.setTag(16);
+//        final Button cargoPlayerStationUp = view.findViewById(R.id.btnCargoPSU);
+//        cargoPlayerStationUp.setTag(15);
+//        final Button cargoPlayerStationDown = view.findViewById(R.id.btnCargoPSD);
+//        cargoPlayerStationDown.setTag(15);
+//        final Button cargoGroundDown = view.findViewById(R.id.btnCargoGD);
+//        cargoGroundDown.setTag(16);
+//        final Button cargoGroundUp = view.findViewById(R.id.btnCargoGU);
+//        cargoGroundUp.setTag(16);
         // Inflate the layout for this fragment
         return view;
 
