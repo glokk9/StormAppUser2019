@@ -228,7 +228,7 @@
                 android:contentDescription="stormLogo"
                 android:cropToPadding="true"
                 android:visibility="visible"
-                app:srcCompat="@drawable/stormlogo_main" />
+                app:srcCompat="@drawable/iclothe_logo" />
 
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>

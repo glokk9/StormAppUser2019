@@ -164,7 +164,7 @@
                     android:layout_marginBottom="0dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_radio_button_green"
-                    android:text="Start"
+                    android:text="Randomize\n Outfit"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="24sp" />
             </LinearLayout>
@@ -227,7 +227,7 @@
                 android:contentDescription="stormLogo"
                 android:cropToPadding="true"
                 android:visibility="visible"
-                app:srcCompat="@drawable/stormlogo_main" />
+                app:srcCompat="@drawable/iclothe_logo" />
 
         </LinearLayout>
     </android.support.constraint.ConstraintLayout>

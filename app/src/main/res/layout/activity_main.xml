@@ -133,7 +133,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/custom_radio_button_blue"
                 android:button="@android:color/transparent"
-                android:text="Generate Outift"
+                android:text="Pick An Outift"
                 android:textSize="24sp" />
         </RadioGroup>
 
@@ -159,7 +159,7 @@
                 android:layout_marginBottom="0dp"
                 android:layout_weight="1"
                 android:background="@drawable/custom_radio_button_green"
-                android:text="iClothe"
+                android:text="Randomize \n Outfit"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp" />
         </LinearLayout>
