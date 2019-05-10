@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             Intent qr = new Intent(this, QR.class);
             startActivity(qr); //Start QR generation activity
         } else {
-            Toast.makeText(getApplicationContext(), "A QR code cannot be generated until data is input", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Settings will be implemented shortly", Toast.LENGTH_SHORT).show();
         }
     }
     public void delete(View v){
@@ -128,11 +128,12 @@ public class MainActivity extends AppCompatActivity {
             scroll.setLayoutParams(new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             checkLayout.setOrientation(LinearLayout.VERTICAL);
             for (int i = 0; i < teams.size(); ++i) {
-                CheckBox checkBox = new CheckBox(getApplicationContext());
+                TextView checkBox = new TextView(getApplicationContext());
+                checkBox.setText("Contact Us At: \n126719@lrstudents.org");
                 checkBox.setText(String.valueOf(teams.get(i).getTeamNum()));
-                checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimary));
+                checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
                 //checkBox.setButtonDrawable(ContextCompat.getDrawable(this, R.drawable.mchk));
-                teamsChk.add(checkBox);
+                //teamsChk.add(checkBox);
             }
             for (int j = 0; j < teamsChk.size(); ++j) {
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -142,15 +143,15 @@ public class MainActivity extends AppCompatActivity {
             }
             scroll.addView(checkLayout);
             AlertDialog.Builder builder = new AlertDialog.Builder(this)
-                    .setTitle("Delete specific Teams")
+                    .setTitle("Contact Us At: \n126719@lrstudents.org")
                     .setView(scroll)
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            for (int k = 0; k < teamsChk.size(); ++k) {
-                                if (teamsChk.get(k).isChecked())
-                                    Handler.getInstance(getApplicationContext()).deleteFromDB(teams.get(k));
-                            }
+//                            for (int k = 0; k < teamsChk.size(); ++k) {
+//                                if (teamsChk.get(k).isChecked())
+//                                    Handler.getInstance(getApplicationContext()).deleteFromDB(teams.get(k));
+//                            }
                         }
                     })
                     .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
