@@ -59,23 +59,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final RadioGroup redBlueGroup = findViewById(R.id.redBlueGroup);
-        final Button start = findViewById(R.id.btnStart);
+        final Button randomizeOutfit = findViewById(R.id.btnStart);
         final TextView teamView = findViewById(R.id.txtTeamNum);
         final TextView matchView = findViewById(R.id.txtMatchNum);
-        final Button deleteLast = findViewById(R.id.button8);
-        start.setOnClickListener(new View.OnClickListener() {
+        final Button delete = findViewById(R.id.button8);
+        randomizeOutfit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                allianceColor = redBlueGroup.getCheckedRadioButtonId() == R.id.red ? "red" : "blue";
-                String insertErrString = "";
-                if (teamView.getText().toString().matches("")) insertErrString += "team number";
-                if (matchView.getText().toString().matches("") && !insertErrString.matches("")) insertErrString += ", match number";
-                else if (matchView.getText().toString().matches("")) insertErrString += "match number";
-                if (teamView.getText().toString().length() > 5) insertErrString +="\t Team Num too long";
-                if (matchView.getText().toString().length() > 4) insertErrString += "\t Match Num too long";
+                //allianceColor = redBlueGroup.getCheckedRadioButtonId() == R.id.red ? "red" : "blue";
+               // String insertErrString = "";
+               // if (teamView.getText().toString().matches("")) insertErrString += "team number";
+               // if (matchView.getText().toString().matches("") && !insertErrString.matches("")) insertErrString += ", match number";
+               // else if (matchView.getText().toString().matches("")) insertErrString += "match number";
+               // if (teamView.getText().toString().length() > 5) insertErrString +="\t Team Num too long";
+               // if (matchView.getText().toString().length() > 4) insertErrString += "\t Match Num too long";
 
-                if (!insertErrString.matches("")) { //If something is missing, display error to user.
-                    Toast.makeText(getApplicationContext(), "Missing data: " + insertErrString, Toast.LENGTH_SHORT).show();
-                } else {
+                //if (!insertErrString.matches("")) { //If something is missing, display error to user.
+                  //  Toast.makeText(getApplicationContext(), "Missing data: " + insertErrString, Toast.LENGTH_SHORT).show();
+               // } else {
                     //TeamNumbers tn = new TeamNumbers(this);
                     //if (tn.isATeamNumber(Integer.parseInt(team.getText().toString()))) { //Check if team number exists
                         //Warn the user if there is already a database entry.
@@ -84,14 +84,14 @@ public class MainActivity extends AppCompatActivity {
                         //PowerUp power = new PowerUp(Integer.parseInt(team.getText().toString()), Integer.parseInt(match.getText().toString()), red.isChecked() ? 1 : 0);
                         //System.out.println("Power: " + power);
                         //EventBus.getDefault().postSticky(power);
-                    teamNum =  Integer.parseInt(teamView.getText().toString());
-                    matchNum = Integer.parseInt(matchView.getText().toString());
+                    //teamNum =  Integer.parseInt(teamView.getText().toString());
+                   // matchNum = Integer.parseInt(matchView.getText().toString());
                         switchTo(match.class); //Enter the match
                     //} else {
                     //    Toast.makeText(getApplicationContext(), "Please input a valid team number", Toast.LENGTH_SHORT).show();
                     //}
                 }
-            }
+          //  }
         });
     }
     public void switchTo(Class c) {
@@ -118,6 +118,23 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Settings will be implemented shortly", Toast.LENGTH_SHORT).show();
         }
     }
+//    public void randomizeOutfit (View v){
+//        final List<DeepSpace> teams = Handler.getInstance(getApplicationContext()).getAllTeams();
+//        final ArrayList<CheckBox> teamsChk = new ArrayList<>();
+//        ScrollView scroll = new ScrollView(this);
+//        LinearLayout checkLayout = new LinearLayout(getApplicationContext());
+//        ch,eckLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//        scroll.setLayoutParams(new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//        checkLayout.setOrientation(LinearLayout.VERTICAL);
+//        for (int i = 0; i < teams.size(); ++i) {
+//            TextView checkBox = new TextView(getApplicationContext());
+//            checkBox.setText("Contact Us At: \n126719@lrstudents.org");
+//            checkBox.setText(String.valueOf(teams.get(i).getTeamNum()));
+//            checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+//            //checkBox.setButtonDrawable(ContextCompat.getDrawable(this, R.drawable.mchk));
+//            //teamsChk.add(checkBox);
+//        }
+//    }
     public void delete(View v){
         if(Handler.getInstance(this).getDBSize() > 0) {
             final List<DeepSpace> teams = Handler.getInstance(getApplicationContext()).getAllTeams();
@@ -133,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 checkBox.setText(String.valueOf(teams.get(i).getTeamNum()));
                 checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
                 //checkBox.setButtonDrawable(ContextCompat.getDrawable(this, R.drawable.mchk));
-                //teamsChk.add(checkBox);
+                //teamsChk.add(CheckBox);
             }
             for (int j = 0; j < teamsChk.size(); ++j) {
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);

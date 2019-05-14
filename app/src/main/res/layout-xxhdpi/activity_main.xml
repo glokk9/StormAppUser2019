@@ -63,7 +63,7 @@
                 android:paddingEnd="20dip"
                 android:paddingBottom="10dip">
 
-                <RadioButton
+                <Button
                     android:id="@+id/purple"
                     style="?android:buttonBarButtonStyle"
                     android:layout_width="wrap_content"
