@@ -39,25 +39,25 @@
                 android:id="@+id/tabAuto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="sandstorm" />
+                android:text="shirts" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabHatch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hatch" />
+                android:text="pants" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabCargo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cargo" />
+                android:text="style" />
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabEndgame"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="t &#8212; 30" />
+                android:text="launch" />
 
         </android.support.design.widget.TabLayout>
     </android.support.design.widget.AppBarLayout>
