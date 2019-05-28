@@ -37,11 +37,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:gravity="center"
-                android:text="HAB Climbing"
+                android:text="Check and Submit"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/custom_radio_button_brown"
+                android:textSize="24sp"
                 android:textStyle="bold"
                 android:typeface="sans" />
 
@@ -60,24 +61,14 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textViewLevel"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Level"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
-
-                <TextView
                     android:id="@+id/textViewSelf"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Self"
+                    android:text="Top"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewAssist"
@@ -85,9 +76,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Robot 1"
+                    android:text="Bottom"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
 
                 <TextView
                     android:id="@+id/textViewAssist2"
@@ -95,9 +86,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="Robot 2"
+                    android:text="Style"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
+                    android:textSize="24sp" />
             </LinearLayout>
 
         </LinearLayout>
@@ -113,56 +104,6 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                    <TextView
-                        android:id="@+id/textView123"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="3"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/textViewTwo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="2"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/textViewOne"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/textViewThree"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="None"
-                        android:textAlignment="center"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp" />
-                </LinearLayout>
-
                 <RadioGroup
                     android:id="@+id/rdogSelf"
                     style="?android:buttonBarStyle"
@@ -170,22 +111,22 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1">
 
-                    <RadioButton
-                        android:id="@+id/rdoSelf3"
-                        style="?android:buttonBarButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity=""
-                        android:layout_marginStart="20dip"
-                        android:layout_marginTop="15dip"
-                        android:layout_marginEnd="20dip"
-                        android:layout_marginBottom="15dip"
-                        android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
-                        android:typeface="sans" />
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/rdoSelf3"-->
+                        <!--style="?android:buttonBarButtonStyle"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_gravity=""-->
+                        <!--android:layout_marginStart="20dip"-->
+                        <!--android:layout_marginTop="15dip"-->
+                        <!--android:layout_marginEnd="20dip"-->
+                        <!--android:layout_marginBottom="15dip"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@drawable/circle_radio_button_red"-->
+                        <!--android:button="@android:color/transparent"-->
+                        <!--android:textColor="@color/colorPrimaryDark"-->
+                        <!--android:textSize="24sp"-->
+                        <!--android:typeface="sans" />-->
 
                     <RadioButton
                         android:id="@+id/rdoSelf2"
@@ -197,9 +138,10 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:textColor="@color/colorPrimaryDark"
+                        android:text="1st top"
                         android:textSize="24sp"
                         android:typeface="sans" />
 
@@ -214,9 +156,10 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:textColor="@color/colorPrimaryDark"
+                        android:text="2nd top"
                         android:textSize="24sp"
                         android:typeface="sans" />
 
@@ -231,10 +174,11 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:checked="true"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="#FFFFFF"
+                        android:text="3rd top"
                         android:textSize="24sp"
                         android:typeface="sans" />
 
@@ -248,21 +192,21 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1">
 
-                    <RadioButton
-                        android:id="@+id/rdoAssist3"
-                        style="?android:buttonBarButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="20dip"
-                        android:layout_marginTop="15dip"
-                        android:layout_marginEnd="20dip"
-                        android:layout_marginBottom="15dip"
-                        android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_orange"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
-                        android:typeface="sans" />
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/rdoAssist3"-->
+                        <!--style="?android:buttonBarButtonStyle"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginStart="20dip"-->
+                        <!--android:layout_marginTop="15dip"-->
+                        <!--android:layout_marginEnd="20dip"-->
+                        <!--android:layout_marginBottom="15dip"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@drawable/circle_radio_button_orange"-->
+                        <!--android:button="@android:color/transparent"-->
+                        <!--android:textColor="@color/colorPrimaryDark"-->
+                        <!--android:textSize="24sp"-->
+                        <!--android:typeface="sans" />-->
 
                     <RadioButton
                         android:id="@+id/rdoAssist2"
@@ -274,9 +218,10 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_orange"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:textColor="@color/colorPrimaryDark"
+                        android:text="1st bot"
                         android:textSize="24sp"
                         android:typeface="sans" />
 
@@ -290,9 +235,10 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_orange"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:textColor="@color/colorPrimaryDark"
+                        android:text="2nd bot"
                         android:textSize="24sp"
                         android:typeface="sans" />
 
@@ -306,10 +252,11 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_orange"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:checked="true"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="#FFFFFF"
+                        android:text="3rd bot"
                         android:textSize="24sp"
                         android:typeface="sans" />
                 </RadioGroup>
@@ -321,21 +268,21 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1">
 
-                    <RadioButton
-                        android:id="@+id/rdoAssist23"
-                        style="?android:buttonBarButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="20dip"
-                        android:layout_marginTop="15dip"
-                        android:layout_marginEnd="20dip"
-                        android:layout_marginBottom="15dip"
-                        android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
-                        android:typeface="sans" />
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/rdoAssist23"-->
+                        <!--style="?android:buttonBarButtonStyle"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginStart="20dip"-->
+                        <!--android:layout_marginTop="15dip"-->
+                        <!--android:layout_marginEnd="20dip"-->
+                        <!--android:layout_marginBottom="15dip"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:background="@drawable/circle_radio_button_red"-->
+                        <!--android:button="@android:color/transparent"-->
+                        <!--android:textColor="@color/colorPrimaryDark"-->
+                        <!--android:textSize="24sp"-->
+                        <!--android:typeface="sans" />-->
 
                     <RadioButton
                         android:id="@+id/rdoAssist22"
@@ -347,27 +294,11 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
-                        android:typeface="sans" />
-
-
-                    <RadioButton
-                        android:id="@+id/rdoAssist21"
-                        style="?android:buttonBarButtonStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="20dip"
-                        android:layout_marginTop="15dip"
-                        android:layout_marginEnd="20dip"
-                        android:layout_marginBottom="15dip"
-                        android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
-                        android:button="@android:color/transparent"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
+                        android:text="Formal"
+                        android:textSize="16dp"
                         android:typeface="sans" />
 
 
@@ -381,11 +312,12 @@
                         android:layout_marginEnd="20dip"
                         android:layout_marginBottom="15dip"
                         android:layout_weight="1"
-                        android:background="@drawable/circle_radio_button_red"
+                        android:background="@drawable/circle_radio_button_brown"
                         android:button="@android:color/transparent"
                         android:checked="true"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="24sp"
+                        android:textColor="#FFFFFF"
+                        android:text="Casual"
+                        android:textSize="16dp"
                         android:typeface="sans" />
 
 
@@ -410,11 +342,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:background="@color/red"
+                android:background="@drawable/custom_radio_button_pink"
                 android:button="@android:color/transparent"
                 android:fontFamily="sans-serif"
                 android:onClick="submit"
-                android:text="Submit"
+                android:text="Submit and get Outfit"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:typeface="sans" />
