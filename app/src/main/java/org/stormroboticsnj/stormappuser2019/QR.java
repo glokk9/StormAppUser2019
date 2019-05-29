@@ -76,7 +76,7 @@ public class QR extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Handler.getInstance(getApplicationContext()).clearTable(); //clear database table
                         Toast.makeText(getApplicationContext(), "Database cleared", Toast.LENGTH_SHORT).show();
-                        MainActivity.QRready = false; //Nofity main menu that a QR code is not ready to be generated
+                        //MainActivity.QRready = false; //Nofity main menu that a QR code is not ready to be generated
                         Intent back = new Intent(getApplicationContext(), MainActivity.class);
                         startActivity(back); //return to main menu
                     }

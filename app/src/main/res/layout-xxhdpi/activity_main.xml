@@ -64,7 +64,7 @@
                 android:paddingBottom="10dip">
 
                 <Button
-                    android:id="@+id/purple"
+                    android:id="@+id/btnCloset"
                     style="?android:buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -98,7 +98,7 @@
                 <!--android:textSize="24sp" />-->
 
                 <RadioButton
-                    android:id="@+id/genOutfit"
+                    android:id="@+id/btnOutfit"
                     style="?android:buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -152,7 +152,7 @@
                 android:paddingBottom="10dip">
 
                 <Button
-                    android:id="@+id/btnQR"
+                    android:id="@+id/btnSettings"
                     style="?android:buttonBarButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -169,7 +169,7 @@
                     android:textSize="24sp" />
 
                 <Button
-                    android:id="@+id/button8"
+                    android:id="@+id/btnContact"
                     style="?android:buttonBarButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

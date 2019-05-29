@@ -48,76 +48,70 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static boolean QRready = false;
-    public static int teamNum;
-    public static int matchNum;
-    public static String allianceColor; //default radio is red
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         final RadioGroup redBlueGroup = findViewById(R.id.redBlueGroup);
+
+
+        final Button closet = findViewById(R.id.btnCloset);
+        final Button selectOutfit = findViewById(R.id.btnOutfit);
         final Button randomizeOutfit = findViewById(R.id.btnStart);
+        final Button settings = findViewById(R.id.btnSettings);
+        final Button contact = findViewById(R.id.btnContact);
+
         final TextView teamView = findViewById(R.id.txtTeamNum);
         final TextView matchView = findViewById(R.id.txtMatchNum);
-        final Button delete = findViewById(R.id.button8);
+
+
+
+
         randomizeOutfit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //allianceColor = redBlueGroup.getCheckedRadioButtonId() == R.id.red ? "red" : "blue";
-               // String insertErrString = "";
-               // if (teamView.getText().toString().matches("")) insertErrString += "team number";
-               // if (matchView.getText().toString().matches("") && !insertErrString.matches("")) insertErrString += ", match number";
-               // else if (matchView.getText().toString().matches("")) insertErrString += "match number";
-               // if (teamView.getText().toString().length() > 5) insertErrString +="\t Team Num too long";
-               // if (matchView.getText().toString().length() > 4) insertErrString += "\t Match Num too long";
-
-                //if (!insertErrString.matches("")) { //If something is missing, display error to user.
-                  //  Toast.makeText(getApplicationContext(), "Missing data: " + insertErrString, Toast.LENGTH_SHORT).show();
-               // } else {
-                    //TeamNumbers tn = new TeamNumbers(this);
-                    //if (tn.isATeamNumber(Integer.parseInt(team.getText().toString()))) { //Check if team number exists
-                        //Warn the user if there is already a database entry.
-                        //if (QRGenReady) Toast.makeText(getApplicationContext(), "There is already an entry in the database. Adding too many entries can cause generated QR codes to become too large to scan!", Toast.LENGTH_SHORT).show();
-                        //Prepare to enter the match
-                        //PowerUp power = new PowerUp(Integer.parseInt(team.getText().toString()), Integer.parseInt(match.getText().toString()), red.isChecked() ? 1 : 0);
-                        //System.out.println("Power: " + power);
-                        //EventBus.getDefault().postSticky(power);
-                    //teamNum =  Integer.parseInt(teamView.getText().toString());
-                   // matchNum = Integer.parseInt(matchView.getText().toString());
-                        switchTo(match.class); //Enter the match
+                switchTo(match.class); //Enter the match
                     //} else {
                     //    Toast.makeText(getApplicationContext(), "Please input a valid team number", Toast.LENGTH_SHORT).show();
                     //}
                 }
           //  }
         });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(), "Settings will be implemented shortly.", Toast.LENGTH_SHORT).show();
+
+            }
+            //  }
+        });
+
+        contact.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(), "Later", Toast.LENGTH_SHORT).show();
+
+            }
+            //  }
+        });
+
+
     }
     public void switchTo(Class c) {
         Intent intent = new Intent(this, c);
         startActivity(intent);
     }
-    public static void clearTempData(){ //Clears temp data for new entry
-        teamNum = 0;
-        matchNum = 0;
-        allianceColor = "";
-    }
-    public void genQR(View v){
-        if (QRready) { //Check if the a QR is ready to be generated
-            List<DeepSpace> teams = Handler.getInstance(this).getAllTeams();
-            String content = "@stormscouting"; //Append a string that the master app requires in all QR codes.
-            for (DeepSpace steam : teams) {
-                content += steam.toString(); //Add data to string
-            }
-            System.out.println("Content: " + content);
-            EventBus.getDefault().postSticky(content);
-            Intent qr = new Intent(this, QR.class);
-            startActivity(qr); //Start QR generation activity
-        } else {
-            Toast.makeText(getApplicationContext(), "Settings will be implemented shortly", Toast.LENGTH_SHORT).show();
-        }
-    }
+//    public static void clearTempData(){ //Clears temp data for new entry
+//        teamNum = 0;
+//        matchNum = 0;
+//        allianceColor = "";
+//    }
+//    public void genQR(View v){
+//        Toast.makeText(getApplicationContext(), "Settings will be implemented shortly", Toast.LENGTH_SHORT).show();
+//    }
 //    public void randomizeOutfit (View v){
 //        final List<DeepSpace> teams = Handler.getInstance(getApplicationContext()).getAllTeams();
 //        final ArrayList<CheckBox> teamsChk = new ArrayList<>();
@@ -135,52 +129,52 @@ public class MainActivity extends AppCompatActivity {
 //            //teamsChk.add(checkBox);
 //        }
 //    }
-    public void delete(View v){
-        if(Handler.getInstance(this).getDBSize() > 0) {
-            final List<DeepSpace> teams = Handler.getInstance(getApplicationContext()).getAllTeams();
-            final ArrayList<CheckBox> teamsChk = new ArrayList<>();
-            ScrollView scroll = new ScrollView(this);
-            LinearLayout checkLayout = new LinearLayout(getApplicationContext());
-            checkLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            scroll.setLayoutParams(new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-            checkLayout.setOrientation(LinearLayout.VERTICAL);
-            for (int i = 0; i < teams.size(); ++i) {
-                TextView checkBox = new TextView(getApplicationContext());
-                checkBox.setText("Contact Us At: \n126719@lrstudents.org");
-                checkBox.setText(String.valueOf(teams.get(i).getTeamNum()));
-                checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-                //checkBox.setButtonDrawable(ContextCompat.getDrawable(this, R.drawable.mchk));
-                //teamsChk.add(CheckBox);
-            }
-            for (int j = 0; j < teamsChk.size(); ++j) {
-                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                params.leftMargin = 25;
-                params.topMargin = 25;
-                checkLayout.addView(teamsChk.get(j), params);
-            }
-            scroll.addView(checkLayout);
-            AlertDialog.Builder builder = new AlertDialog.Builder(this)
-                    .setTitle("Contact Us At: \n126719@lrstudents.org")
-                    .setView(scroll)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-//                            for (int k = 0; k < teamsChk.size(); ++k) {
-//                                if (teamsChk.get(k).isChecked())
-//                                    Handler.getInstance(getApplicationContext()).deleteFromDB(teams.get(k));
-//                            }
-                        }
-                    })
-                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialogInterface, int i) {
-                            dialogInterface.dismiss();
-                        }
-                    });
-            AppCompatDialog dialog = builder.create();
-            dialog.show();
-        }
-    }
+//    public void delete(View v){
+//        if(Handler.getInstance(this).getDBSize() > 0) {
+//            final List<DeepSpace> teams = Handler.getInstance(getApplicationContext()).getAllTeams();
+//            final ArrayList<CheckBox> teamsChk = new ArrayList<>();
+//            ScrollView scroll = new ScrollView(this);
+//            LinearLayout checkLayout = new LinearLayout(getApplicationContext());
+//            checkLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//            scroll.setLayoutParams(new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+//            checkLayout.setOrientation(LinearLayout.VERTICAL);
+//            for (int i = 0; i < teams.size(); ++i) {
+//                TextView checkBox = new TextView(getApplicationContext());
+//                checkBox.setText("Contact Us At: \n126719@lrstudents.org");
+//                checkBox.setText(String.valueOf(teams.get(i).getTeamNum()));
+//                checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+//                //checkBox.setButtonDrawable(ContextCompat.getDrawable(this, R.drawable.mchk));
+//                //teamsChk.add(CheckBox);
+//            }
+//            for (int j = 0; j < teamsChk.size(); ++j) {
+//                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+//                params.leftMargin = 25;
+//                params.topMargin = 25;
+//                checkLayout.addView(teamsChk.get(j), params);
+//            }
+//            scroll.addView(checkLayout);
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this)
+//                    .setTitle("Contact Us At: \n126719@lrstudents.org")
+//                    .setView(scroll)
+//                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialogInterface, int i) {
+////                            for (int k = 0; k < teamsChk.size(); ++k) {
+////                                if (teamsChk.get(k).isChecked())
+////                                    Handler.getInstance(getApplicationContext()).deleteFromDB(teams.get(k));
+////                            }
+//                        }
+//                    })
+//                    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+//                        @Override
+//                        public void onClick(DialogInterface dialogInterface, int i) {
+//                            dialogInterface.dismiss();
+//                        }
+//                    });
+//            AppCompatDialog dialog = builder.create();
+//            dialog.show();
+//        }
+//    }
     @Override
     protected void onStop() {
         // call the superclass method first
