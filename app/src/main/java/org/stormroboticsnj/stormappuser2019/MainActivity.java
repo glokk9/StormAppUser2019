@@ -47,6 +47,7 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
+    private Button btnStart;
 
 
     @Override
@@ -54,13 +55,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnStart = findViewById(R.id.btnStart);
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMatch();
+
+            }
+        });
 
         final RadioGroup redBlueGroup = findViewById(R.id.redBlueGroup);
 
 
-        final Button closet = findViewById(R.id.btnCloset);
+        final Button closet = findViewById(R.id.purple);
         final Button selectOutfit = findViewById(R.id.btnOutfit);
-        final Button randomizeOutfit = findViewById(R.id.btnStart);
+        //final Button randomizeOutfit = findViewById(R.id.btnStart);
         final Button settings = findViewById(R.id.btnSettings);
         final Button contact = findViewById(R.id.btnContact);
 
@@ -68,38 +77,53 @@ public class MainActivity extends AppCompatActivity {
         final TextView matchView = findViewById(R.id.txtMatchNum);
 
 
+//        closet.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                //switchTo(match.class); //Enter the match
+//                //} else {
+//                //    Toast.makeText(getApplicationContext(), "Please input a valid team number", Toast.LENGTH_SHORT).show();
+//                //}
+//                Toast.makeText(getApplicationContext(), "Settings will be implemented shortly.", Toast.LENGTH_LONG).show();
+//            }
+//            //  }
+//        });
 
 
-        randomizeOutfit.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                switchTo(match.class); //Enter the match
+
+       // btnStart.setOnClickListener(new View.OnClickListener() {
+        //    public void onClick(View v) {
+                //switchTo(match.class); //Enter the match
                     //} else {
                     //    Toast.makeText(getApplicationContext(), "Please input a valid team number", Toast.LENGTH_SHORT).show();
                     //}
                 }
+                public void openMatch() {
+                    Intent intent = new Intent(this, match.class);
+                    startActivity(intent);
+                }
           //  }
-        });
+      //  });
 
-        settings.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+      //  settings.setOnClickListener(new View.OnClickListener() {
+        //    public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(), "Settings will be implemented shortly.", Toast.LENGTH_SHORT).show();
+           //     Toast.makeText(getApplicationContext(), "Settings will be implemented shortly.", Toast.LENGTH_LONG).show();
 
-            }
+          //  }
             //  }
-        });
+    //    });
 
-        contact.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+       // contact.setOnClickListener(new View.OnClickListener() {
+           // public void onClick(View v) {
 
-                Toast.makeText(getApplicationContext(), "Later", Toast.LENGTH_SHORT).show();
+            //    Toast.makeText(getApplicationContext(), "Contact iClothe at: bubuludev@gmail.com", Toast.LENGTH_SHORT).show();
 
-            }
+         //   }
             //  }
-        });
+     //   });
 
 
-    }
+  //  }
     public void switchTo(Class c) {
         Intent intent = new Intent(this, c);
         startActivity(intent);
@@ -113,20 +137,20 @@ public class MainActivity extends AppCompatActivity {
 //        Toast.makeText(getApplicationContext(), "Settings will be implemented shortly", Toast.LENGTH_SHORT).show();
 //    }
 //    public void randomizeOutfit (View v){
-//        final List<DeepSpace> teams = Handler.getInstance(getApplicationContext()).getAllTeams();
-//        final ArrayList<CheckBox> teamsChk = new ArrayList<>();
-//        ScrollView scroll = new ScrollView(this);
-//        LinearLayout checkLayout = new LinearLayout(getApplicationContext());
-//        ch,eckLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-//        scroll.setLayoutParams(new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
-//        checkLayout.setOrientation(LinearLayout.VERTICAL);
-//        for (int i = 0; i < teams.size(); ++i) {
-//            TextView checkBox = new TextView(getApplicationContext());
-//            checkBox.setText("Contact Us At: \n126719@lrstudents.org");
-//            checkBox.setText(String.valueOf(teams.get(i).getTeamNum()));
-//            checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
-//            //checkBox.setButtonDrawable(ContextCompat.getDrawable(this, R.drawable.mchk));
-//            //teamsChk.add(checkBox);
+////        final List<DeepSpace> teams = Handler.getInstance(getApplicationContext()).getAllTeams();
+////        final ArrayList<CheckBox> teamsChk = new ArrayList<>();
+////        ScrollView scroll = new ScrollView(this);
+////        LinearLayout checkLayout = new LinearLayout(getApplicationContext());
+////        ch,eckLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+////        scroll.setLayoutParams(new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+////        checkLayout.setOrientation(LinearLayout.VERTICAL);
+////        for (int i = 0; i < teams.size(); ++i) {
+////            TextView checkBox = new TextView(getApplicationContext());
+////            checkBox.setText("Contact Us At: \n126719@lrstudents.org");
+////            checkBox.setText(String.valueOf(teams.get(i).getTeamNum()));
+////            checkBox.setTextColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
+////            //checkBox.setButtonDrawable(ContextCompat.getDrawable(this, R.drawable.mchk));
+////            //teamsChk.add(checkBox);
 //        }
 //    }
 //    public void delete(View v){

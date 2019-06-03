@@ -64,7 +64,7 @@
                 android:paddingBottom="10dip">
 
                 <Button
-                    android:id="@+id/btnCloset"
+                    android:id="@+id/purple"
                     style="?android:buttonBarButtonStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
